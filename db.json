@@ -1,0 +1,21 @@
+{
+  "categoris": [
+    {
+      "id": 1,
+      "name": "Home Work"
+    },
+    {
+      "id": "1a6c01f-43-811f-f25-e30af446a6d2",
+      "name": "asdasd"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 3,
+      "content": "Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this",
+      "title": "Build First Reactjs",
+      "status": false,
+      "categorisId": 1
+    }
+  ]
+}

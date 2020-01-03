@@ -1,0 +1,370 @@
+.TaskList {
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    .row {
+        height: 100%;
+        .col-sidebar {
+            background-color: white;
+            max-width: 300px;
+            padding: 15px;
+            .SideBar {
+                h3 {
+                    color: #212121;
+                    font-weight: 900;
+                    font-size: 2em;
+                }
+                input {
+                    background-color: #E8EAF6;
+                    padding: 5px 15px;
+                    border:unset;
+                    width: 100%;
+                    outline: unset;
+                    font-weight: 600;
+                    color: #616161;
+                    border-radius: 0.25em;
+
+                }
+                .cate-list {
+                    margin: 15px -15px;
+                    .cate-list__item {
+                        display: flex;
+                        flex-direction: row;
+                        padding: 15px;
+                        border-bottom: 1.5px solid #EEEEEE;
+                        &:hover {
+                            background-color: #ffffff;
+                            box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,.132), 0 0.3px 0.9px 0 rgba(0,0,0,.108);
+                        }
+                        p {
+                            margin: 0;
+                            color: #616161;
+                            font-weight: 600;
+                            font-size: 1.1em;
+                            display:flex;
+                            align-items: center;
+                        }
+                        .item__title {
+                            margin: 0;
+                            flex: 1;
+                            font-weight: 700;
+                        }
+                    }
+                }
+                .show-cate-form {
+                    font-size: 1em;
+                    font-weight: 700;
+                    color: #1A237E;
+                    background-color: unset;
+                    border: unset;
+                    outline: unset;
+                    display:block;
+                    margin: 10px auto;
+                }
+                .module-cateform {
+                    background-color: #E8EAF6;
+                    margin-left: -15px;
+                    margin-right: -15px;
+                    margin-top: -15px;
+                    input {
+                        border-radius: 0;
+                        background-color: unset;
+                        padding: 15px 15px;
+                    }
+                    .module-button {
+                        display: flex;
+                        flex-direction: row;
+                        button {
+                            background-color: unset;
+                            flex: 1;
+                            outline: unset;
+                            border: 0;
+                            border-radius: 0.25em;
+                            margin: 0 15px 15px 15px;
+                            background-color: #00E676;
+                            color: white;
+                            &:first-of-type {
+                                background-color: #795548;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .col-dashboard {
+            background-color: #E8EAF6;
+            box-shadow: 0 3.2px 7.2px 0 rgba(0,0,0,.132), 0 0.6px 1.8px 0 rgba(0,0,0,.108);
+            padding: 15px;
+            .DashBoard {
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                h2 {
+                    text-align: center;
+                }
+                input {
+                    padding: 5px 15px;
+                    border:unset;
+                    outline: unset;
+                    background-color: white;
+                    border-radius: 0.25em;
+                    font-weight: 600;
+                    display: block;
+                    margin: auto;
+                    width: 400px;
+                }                
+                .del-cate {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 0.25em;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 0;
+                    outline: 0;
+                    border: 1.5px solid #FF1744;
+                    color: #FF1744;
+                    background-color: unset;
+                }
+                .row {
+                    margin-top: 15px;
+                    flex: 1;
+                    .col {
+                        max-width: unset;
+                        &:nth-of-type(1),&:nth-of-type(2) {
+                            max-width: 300px;
+                        }
+                        .add-task {
+                            display: block;
+                            background-color: unset;
+                            font-weight: 700;
+                            outline: unset;
+                            border: unset;
+                            margin: 10px auto;
+                            color: #283593;
+                        }
+                        .list {
+                            background-color: pink;
+                            display: flex;
+                            flex-direction: row;
+                            padding: 15px 15px;
+                            border-radius: 0.25em;
+                            margin-bottom: 15px;
+                            font-weight: 600;
+                            box-shadow: 0 1.6px 3.6px 0 rgba(0,0,0,.132), 0 0.3px 0.9px 0 rgba(0,0,0,.108);
+                            &.list-complete {
+                                background-color: white;
+                                border-top: 3px solid #69F0AE;
+                            }
+                            &.list-uncomplete {
+                                background-color: white;
+                                border-top: 3px solid #FFAB40;
+                            }
+                            p {
+                                margin: 0;
+                                font-weight: 700;
+                                &:first-of-type {
+                                    flex: 1;
+                                }
+                            }
+                        }
+                        .task-list {
+                            .task-list__item {
+                                margin-bottom: 5px;
+                                overflow: hidden;
+                                border-radius: 0.25em;
+                                position: relative;
+                                transition: all .2s ease;
+                                &:hover {
+                                    button {
+                                        &:first-of-type {
+                                            background-color: white;
+                                        }
+                                    }
+                                }
+                                button {
+                                    &:first-of-type {
+                                        padding: 15px;
+                                        width: 100%;
+                                        border: unset;
+                                        outline: unset;
+                                        background-color: #f3f4f8;
+                                        text-align: left;
+                                        color: #424242;
+                                        border-radius: 0.25em;
+                                        display: flex;
+                                        align-items: center;
+                                        font-weight: 600;
+                                        transition: all .1s ease-in-out;
+                                    }
+                                    &:nth-of-type(2) {
+                                        position: absolute;
+                                        background-color: #E8EAF6;
+                                        height: 25px;
+                                        width: 25px;
+                                        right: 15px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        border: 1.5px solid #C5CAE9;
+                                        outline: unset;
+                                        border-radius: 0.25em;
+                                    }
+                                }
+                            }
+                        }
+                        .module-task {
+                            display: flex;
+                            flex-direction: column;
+                            height: 100%;
+                            background-color: white;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            border-radius: 0.25em;
+                            margin-left: -15px;
+                            .module-header {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                .task-button {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    padding-top: 15px;
+                                    flex: 1;
+                                    .task-del {
+                                        color: #FF1744;
+                                        background-color: unset;
+                                        outline: unset;
+                                        border: 1.5px solid #FF1744;
+                                        border-radius: 0.25em;
+                                        display: flex;
+                                        height: 30px;
+                                        margin-left: auto;
+                                    }
+                                    .task-close {
+                                        color: black;
+                                        background-color: unset;
+                                        outline: unset;
+                                        border: 1.5px solid black;
+                                        border-radius: 0.25em;
+                                        display: flex;
+                                        height: 30px;
+                                        margin-left: 15px;
+                                    }
+                                    .mark-complete {
+                                        width: unset;
+                                        background-color: unset;
+                                        border: 1.5px solid gray;
+                                        outline: unset;
+                                        height: 30px;
+                                        border-radius: 0.25em;
+                                        font-weight: 600;
+                                        font-size: 0.9em;
+                                        &.true {
+                                            background-color: #00E676;
+                                            color: white;
+                                            border: unset;
+                                            outline: unset;
+                                            border-radius: 0.25em;
+                                        }
+                                    }
+                                }
+                            }
+                            .module-content {
+                                flex: 1;
+                                margin-top: 15px;
+                                border-radius: 0.25em;
+                                display: flex;
+                                flex-direction: column;
+                                input {
+                                    background-color: unset;
+                                    padding: 15px 0;
+                                    margin: 0;
+                                    font-size: 2em;
+                                    display: block;
+                                    width: 100%;
+                                    color: #212121;
+                                    border-radius: unset;
+                                }
+                                textarea {
+                                    display: block;
+                                    width: 100%;
+                                    border: unset;
+                                    outline: unset;
+                                    font-size: 1.2em;
+                                    background-color: unset;
+                                    color: #212121;
+                                    min-height: 300px;
+                                }
+                                button {
+                                    margin-top: 15px;
+                                    outline: unset;
+                                    background-color: unset;
+                                    border: 1.5px solid #212121;
+                                    font-weight: 600;
+                                    padding: 6px 15px;
+                                    border-radius: 0.25em;
+                                    align-self: flex-end;
+                                    margin-top: auto;
+                                    margin-bottom: 15px;
+                                    display: flex;
+                                }
+                            }
+                        }
+                        .module-form {
+                            background-color: white;
+                            height: 100%;
+                            border-radius: 0.25em;
+                            padding: 15px;
+                            display: flex;
+                            flex-direction: column;
+                            .form-close {
+                                color: black;
+                                background-color: unset;
+                                outline: unset;
+                                border: 1.5px solid black;
+                                border-radius: 0.25em;
+                                display: flex;
+                                height: 30px;
+                                margin-left: auto;
+                            }
+                            .form {
+                                flex: 1;
+                                display: flex;
+                                flex-direction: column;
+                                input {
+                                    font-size: 2em;
+                                    font-weight: 600;
+                                    margin: 0;
+                                    width: 100%;
+                                    padding: 15px 0;
+                                }
+                                textarea {
+                                    background-color: unset;
+                                    border: unset;
+                                    outline: unset;
+                                    display: block;
+                                    width: 100%;
+                                    min-height: 300px;
+                                    font-size: 1.2em;
+                                }
+                                button {
+                                    outline: unset;
+                                    background-color: unset;
+                                    border: 1.5px solid #212121;
+                                    font-weight: 600;
+                                    padding: 6px 15px;
+                                    border-radius: 0.25em;
+                                    align-self: flex-end;
+                                    margin-top: auto;
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
